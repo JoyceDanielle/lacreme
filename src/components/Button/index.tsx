@@ -5,12 +5,13 @@ import { Area } from './style';
 import { TypesModal } from '../../pages/Home';
 
 export interface IButtonProps {
-    title: TypesModal
+    title: TypesModal,
+    onClick(modal: boolean): void
 }
 
 export function Button (props: IButtonProps) {
   return (
-    <Area>
+    <Area onClick={()=> props.onClick(true)}>
       {props.title}
     </Area>
   );

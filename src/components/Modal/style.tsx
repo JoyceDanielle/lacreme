@@ -8,7 +8,7 @@ interface IModalStyle{
 }
 
 export const Area = styled.div<IModalStyle>`
-    display: ${props => props.type ? "none" : "block"};
+    display: ${props => props.type === false ? "none" : "block"};
 `
 
 export const Background = styled.div`
@@ -21,6 +21,7 @@ export const Background = styled.div`
 
 export const Container = styled.div`
     position: absolute;
+    border-radius: 4px;
     width: 400px;
     height: 400px;
     background-color: #FFF;
@@ -32,6 +33,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
 `
 
 export const Title = styled.span`
